@@ -6,6 +6,121 @@ body {
 	background: #fff;
 }
 
+
+/* Password verification styles */
+.password-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.password-card {
+	background: white;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 400px;
+	text-align: center;
+	animation: fadeInUp 0.5s ease;
+}
+
+.password-card h1 {
+	color: #333;
+	margin-bottom: 30px;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+#password-form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+#access-password {
+	padding: 15px;
+	font-size: 16px;
+	border: 2px solid #e0e0e0;
+	border-radius: 8px;
+	outline: none;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#access-password:focus {
+	border-color: #30a8f7;
+	box-shadow: 0 0 0 3px rgba(48, 168, 247, 0.1);
+}
+
+#password-form button {
+	padding: 15px;
+	background: linear-gradient(135deg, #30a8f7, #2196f3);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#password-form button:hover {
+	background: linear-gradient(135deg, #2196f3, #1976d2);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(48, 168, 247, 0.3);
+}
+
+#password-form button:active {
+	transform: translateY(0);
+}
+
+.password-error {
+	color: #dc3545;
+	font-size: 14px;
+	margin-top: 15px;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.password-error.show {
+	opacity: 1;
+}
+
+/* Hide login container by default */
+.login-container {
+	display: none;
+}
+
+/* Show login container after password verification */
+.password-verified .login-container {
+	display: block;
+}
+
+.password-verified .password-container {
+	opacity: 0;
+	transform: translateY(-20px);
+	pointer-events: none;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .login-page{
 display: flex;
 justify-content: center;
