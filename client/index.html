@@ -31,7 +31,17 @@
 		}
 	</style>
 </head>
-<body class="preload">	<div class="login-container" id="login-container">
+<body class="preload">		<div class="password-container" id="password-container">
+		<div class="password-card">
+			<h1>请输入访问密码</h1>
+			<form id="password-form">
+				<input type="password" id="access-password" placeholder="输入密码" required>
+				<button type="submit">验证</button>
+			</form>
+			<div class="password-error" id="password-error"></div>
+		</div>
+	</div>
+	<div class="login-container" id="login-container">
 		<!-- 翻转卡片容器 -->
 		<div class="flip-card" id="flip-card">
 			<div class="flip-card-inner">
