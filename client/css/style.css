@@ -6,7 +6,6 @@ body {
 	background: #fff;
 }
 
-
 /* Password verification styles */
 .password-container {
 	display: flex;
@@ -101,7 +100,7 @@ body {
 
 /* Show login container after password verification */
 .password-verified .login-container {
-	display: block;
+	display: flex;
 }
 
 .password-verified .password-container {
