@@ -169,7 +169,11 @@ body {
     display: flex;
     text-align: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
 }
 
 .login-container h1 {
@@ -192,9 +196,15 @@ body {
 .input-group {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	position: relative;
 	margin-bottom: 10px;
+	width: 100%;
+}
+
+.input-group input {
+	width: 100%;
+	max-width: 350px;
 }
 
 .input-group label:not(.floating-label) {
