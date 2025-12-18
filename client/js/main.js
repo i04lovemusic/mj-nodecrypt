@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const accessPassword = $id('access-password');
 
 	// 这里可以修改为你想要的密码
-	const CORRECT_PASSWORD = 'nodecrypt';
+	const CORRECT_PASSWORD = 'psz';
 
 	passwordForm.addEventListener('submit', (e) => {
 		e.preventDefault();
